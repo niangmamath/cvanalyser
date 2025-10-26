@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-  </head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Agent d'analyse de CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --primary-color: #0062E6;
+            --secondary-color: #333;
+            --background-light: #F7F9FC;
+            --white-color: #FFFFFF;
+            --text-color: #555;
+            --light-gray: #EAECEF;
+            --shadow-color: rgba(0, 98, 230, 0.15);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 900px;
+            text-align: center;
+            background: var(--white-color);
+            padding: 4em;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.3em;
+            background: -webkit-linear-gradient(45deg, #0062E6, #00C6FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.lead {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin-bottom: 2.5em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1em 2.5em;
+            background-image: linear-gradient(45deg, var(--primary-color) 0%, #00C6FF 100%);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            border: none;
+        }
+        .cta-button:hover {
+            background-image: linear-gradient(45deg, #0058D0 0%, #00B2E6 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 98, 230, 0.25);
+        }
+        .features {
+            margin-top: 4em;
+            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5em;
+        }
+        .feature {
+            background: var(--background-light);
+            padding: 2em;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .feature-icon {
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+        .feature h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        .feature p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agent d'Analyse de CV IA</h1>
+        <p class="lead">Transformez votre recrutement avec une analyse de CV intelligente. Gagnez du temps, identifiez les meilleurs talents et prenez des décisions plus éclairées.</p>
+        <a href="/analyzer" class="cta-button">Lancer l'Analyseur</a>
+        <div class="features">
+            <div class="feature">
+                <i class="feature-icon" data-feather="cpu"></i>
+                <h3>Analyse Intelligente</h3>
+                <p>Notre IA évalue la pertinence des CV par rapport à votre offre, en extrayant les informations clés.</p>
+            </div>
+            <div class="feature">
+                <i class="feature-icon" data-feather="bar-chart-2"></i>
+                <h3>Scoring et Classement</h3>
+                <p>Chaque candidat reçoit un score et un classement, vous offrant une vision claire et hiérarchisée.</p>
+            </div>
+            <div class="feature">
+                <i class="feature-icon" data-feather="message-circle"></i>
+                <h3>Chat Interactif</h3>
+                <p>Dialoguez avec l'IA pour approfondir l'analyse, poser des questions et obtenir des insights supplémentaires.</p>
+            </div>
+        </div>
+    </div>
 
-  <body>
-    <h1>Hello World</h1>
-  </body>
+    <script>
+      feather.replace()
+    </script>
+</body>
 </html>

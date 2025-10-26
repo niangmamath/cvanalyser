@@ -1,6 +1,6 @@
-# Dev environment
-pip
-autopep8
-
-# App
 flask
+openai==0.28
+python-dotenv
+pdfplumber
+pytesseract
+pdf2image
